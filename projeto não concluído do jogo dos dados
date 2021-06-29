@@ -1,0 +1,168 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled",
+      "provenance": [],
+      "authorship_tag": "ABX9TyNmc5bmiOMhYFqbLYe5KfSy",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/devwillbrito/exercicios-phyton-/blob/main/projeto%20n%C3%A3o%20conclu%C3%ADdo%20do%20jogo%20dos%20dados\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 397
+        },
+        "id": "8WkPoyiMy3uj",
+        "outputId": "b2f05a82-26b9-4403-e838-bf56af35e5f8"
+      },
+      "source": [
+        "import random\n",
+        "from operator import itemgetter\n",
+        "i=0\n",
+        "soma=0\n",
+        "\n",
+        "ranking= dict()\n",
+        "jogo=list()\n",
+        "primeiro=list()\n",
+        "segundo=list()\n",
+        "terceiro=list()\n",
+        "quarto=list()\n",
+        "jogador1=dict()\n",
+        "jogador2=dict()\n",
+        "jogador3=dict()\n",
+        "jogador4=dict()\n",
+        "cont=int(input('quantas vezes vc quer jogar?'))\n",
+        "\n",
+        "\n",
+        "while cont > i:  \t    \n",
+        "  i=i+1\n",
+        "  jogador1['jogador1']=random.randint(1, 6)\n",
+        "  primeiro.append(jogador1.copy())\n",
+        "  jogo.append(jogador1.copy())\n",
+        "  \n",
+        "  jogador2['jogador2']=random.randint(1, 6)\n",
+        "  segundo.append(jogador2.copy())\n",
+        "  jogo.append(jogador2.copy())\n",
+        "\n",
+        "  jogador3['jogador3']=random.randint(1, 6)\n",
+        "  terceiro.append(jogador3.copy())\n",
+        "  jogo.append(jogador3.copy())\n",
+        "\n",
+        "  jogador4['jogador4']=random.randint(1, 6)\n",
+        "  quarto.append(jogador4.copy())\n",
+        "  jogo.append(jogador4.copy())\n",
+        "\n",
+        "#tentei usar somas de 3 formas diferentes e nenhuma deu certo \n",
+        "\n",
+        "total = total = sum(map(lambda jogador1:int(jogador1),jogador1.values()))\n",
+        "print(total)\n",
+        "\n",
+        "soma2= soma + len(jogador2)\n",
+        "print(soma2)\n",
+        "\n",
+        "def somalista2(segundo):\n",
+        "    soma = 0\n",
+        "    for i in segundo:\n",
+        "      soma = soma + i\n",
+        "    return soma\n",
+        "\n",
+        "print(somalista2([]))\n",
+        "\n",
+        "def somalista3(terceiro):\n",
+        "    soma = 0\n",
+        "    for i in terceiro:\n",
+        "      soma = soma + i\n",
+        "    return soma\n",
+        "\n",
+        "print(somalista3([]))\n",
+        "\n",
+        "def somalista4(quarto):\n",
+        "    soma = 0\n",
+        "    for i in quarto:\n",
+        "      soma = soma + i\n",
+        "    return soma\n",
+        "\n",
+        "print(somalista4([]))\n",
+        "\n",
+        "print(primeiro)\n",
+        "print(segundo)\n",
+        "print(terceiro)\n",
+        "print(quarto)\n",
+        "\n",
+        "ranking= sorted(jogo.itens(), key= itemgetter(1), reverse=true) #tentei enumerar os vencedores colocando 1, 2 , 3 de posição \n",
+        "print('-=' *30)\n",
+        "for i, v in enumerate (ranking):\n",
+        "  print(f' a posição {+1}, lugar: com {v[1]}')\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "    \n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "        \n"
+      ],
+      "execution_count": 64,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "quantas vezes vc quer jogar?3\n",
+            "4\n",
+            "1\n",
+            "0\n",
+            "0\n",
+            "0\n",
+            "[{'jogador1': 2}, {'jogador1': 6}, {'jogador1': 4}]\n",
+            "[{'jogador2': 1}, {'jogador2': 6}, {'jogador2': 2}]\n",
+            "[{'jogador3': 5}, {'jogador3': 3}, {'jogador3': 1}]\n",
+            "[{'jogador4': 2}, {'jogador4': 6}, {'jogador4': 3}]\n"
+          ],
+          "name": "stdout"
+        },
+        {
+          "output_type": "error",
+          "ename": "AttributeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-64-eb4c97d6a419>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m     72\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mquarto\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     73\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m---> 74\u001b[0;31m \u001b[0mranking\u001b[0m\u001b[0;34m=\u001b[0m \u001b[0msorted\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mjogo\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mitens\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mkey\u001b[0m\u001b[0;34m=\u001b[0m \u001b[0mitemgetter\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;36m1\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mreverse\u001b[0m\u001b[0;34m=\u001b[0m\u001b[0mtrue\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m     75\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0;34m'-='\u001b[0m \u001b[0;34m*\u001b[0m\u001b[0;36m30\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m     76\u001b[0m \u001b[0;32mfor\u001b[0m \u001b[0mi\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mv\u001b[0m \u001b[0;32min\u001b[0m \u001b[0menumerate\u001b[0m \u001b[0;34m(\u001b[0m\u001b[0mranking\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mAttributeError\u001b[0m: 'list' object has no attribute 'itens'"
+          ]
+        }
+      ]
+    }
+  ]
+}
